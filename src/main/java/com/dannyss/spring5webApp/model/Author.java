@@ -57,6 +57,12 @@ public class Author {
 		return "Author [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", books=" + books + "]";
 	}
 
+	/**
+	 * constructor
+	 * @param firstName
+	 * @param lastName
+	 * @param books
+	 */
 	public Author(String firstName, String lastName, Set<Book> books) {
         this.firstName = firstName;
         this.lastName = lastName;
