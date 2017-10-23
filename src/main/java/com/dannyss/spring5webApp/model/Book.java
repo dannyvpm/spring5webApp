@@ -8,6 +8,10 @@ import java.util.Set;
  * Created by jt on 5/16/17.
  */
 
+/*
+ * Modifed by Daniel for testing git
+ */
+
 @Entity
 public class Book {
     @Override
