@@ -9,9 +9,9 @@ import java.util.Set;
  */
 
 /*
- * Modifed by Daniel for testing git
+ * This is to test staging
+ * 
  */
-
 @Entity
 public class Book {
     @Override
