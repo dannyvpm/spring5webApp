@@ -7,27 +7,26 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 
 @Entity
 public class Publisher {
 	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	@GeneratedValue(strategy=GenerationType.SEQUENCE)
 	private Long id;
 	private String name;
 	private String address;
-	
-	@OneToMany(mappedBy="publisher")
-	private Set<Book> books = new HashSet<>();
 
-	public Publisher(String name, String address, Set<Book> books) {
+
+	public Publisher(String name, String address) {
 		this.name = name;
 		this.address = address;
-		this.books = books;
 	}
-	
-	
+
+	public Publisher() {
+
+	}
+
 	public Long getId() {
 		return id;
 	}
@@ -52,16 +51,5 @@ public class Publisher {
 		this.address = address;
 	}
 
-	public Set<Book> getBooks() {
-		return books;
-	}
-
-	public void setBooks(Set<Book> books) {
-		this.books = books;
-	}
-
-
-	
-	
 
 }
